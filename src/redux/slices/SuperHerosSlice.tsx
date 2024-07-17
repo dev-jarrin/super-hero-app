@@ -53,13 +53,14 @@ export const fetchSuperheroes = createAsyncThunk<
       ids.map((id) =>
         axios
           .get(
-            `${import.meta.env.CORS_PROXY_URL}/${import.meta.env.BASE_URL}/${
-              import.meta.env.ACCESS_TOKEN
+            `${import.meta.env.VITE_PROXY}/${import.meta.env.VITE_BASE_URL}/${
+              import.meta.env.VITE_API_KEY
             }/${id}`
           )
           .then((response) => response.data)
           .catch((_) => {
             throw new Error("Error fetching data");
+            // return null;
           })
       )
     );
