@@ -46,9 +46,9 @@ SuperHeroApp is a React-based web application that allows users to find their be
    One thing to note here, since superhero api was not cors enabled, You have to add a proxy url in the request while hitting the url. The suggested url is: https://cors-anywhere.herokuapp.com, as this is using node's package cors-anywhere.
 
    ```
-   CORS_PROXY_URL=your_proxy_url
-   BASE_URL=your_base_url
-   ACCESS_TOKEN=your_api_key
+   VITE_PROXY=https://cors-anywhere.herokuapp.com
+   VITE_BASE_URL=https://superheroapi.com/api
+   VITE_API_KEY=your access token
    ```
 
 4. **Run the application**:
@@ -63,7 +63,7 @@ SuperHeroApp is a React-based web application that allows users to find their be
    yarn start
    ```
 
-   The application will be available at `http://localhost:3000`.
+   The application will be available at `http://localhost:5173`.
 
 ## Usage
 
