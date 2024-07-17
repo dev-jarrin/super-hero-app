@@ -17,7 +17,7 @@ import Loader from "../../components/Loader";
 const HomePage = () => {
   const dispatch = useDispatch();
   const refEle = useRef(null);
-  const refCharecterElement = useRef(null);
+  const refCharacterElement = useRef(null);
   const [showConfetti, setShowConfetti] = useState(false);
 
   const status = useSelector(
@@ -77,13 +77,13 @@ const HomePage = () => {
       <div className="flex flex-col justify-center items-center w-full h-screen ">
         <Slider
           refEle={refEle}
-          refCharecterElement={refCharecterElement}
+          refCharacterElement={refCharacterElement}
           setShowConfetti={setShowConfetti}
         />
       </div>
       <div>
         <Confetti showConfetti={showConfetti} />
-        <Character refCharecterElement={refCharecterElement} />
+        <Character refCharacterElement={refCharacterElement} />
       </div>
     </>
   );

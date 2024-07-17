@@ -14,7 +14,6 @@ import { motion } from "framer-motion";
 import Stepper from "./Stepper";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-// import card1
 import { useDispatch } from "react-redux";
 import {
   calculateFinalCracteristics,
@@ -40,7 +39,7 @@ const images = [
 interface SliderProps {
   refEle: React.RefObject<any>;
   setShowConfetti: React.Dispatch<React.SetStateAction<boolean>>;
-  refCharecterElement: React.RefObject<any>;
+  refCharacterElement: React.RefObject<any>;
 }
 
 const Slider: React.FC<SliderProps> = (props) => {
@@ -180,7 +179,6 @@ const Slider: React.FC<SliderProps> = (props) => {
           </motion.div>
 
           {isLoading ? (
-            // <h1>Loading</h1>
             <CircularProgress />
           ) : (
             <div className="flex flex-row p-4 m-8">
@@ -247,7 +245,7 @@ const Slider: React.FC<SliderProps> = (props) => {
 
                       setTimeout(() => {
                         props.setShowConfetti(true);
-                        props.refCharecterElement.current.scrollIntoView({
+                        props.refCharacterElement.current.scrollIntoView({
                           behavior: "smooth",
                         });
                         setLoading(false);

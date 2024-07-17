@@ -60,7 +60,6 @@ export const fetchSuperheroes = createAsyncThunk<
           .then((response) => response.data)
           .catch((_) => {
             throw new Error("Error fetching data");
-            // return null;
           })
       )
     );

@@ -8,14 +8,14 @@ import { RootState } from "../redux/store";
 import Loader from "./Loader";
 
 const Character = ({
-  refCharecterElement,
+  refCharacterElement,
 }: {
-  refCharecterElement: React.RefObject<any>;
+  refCharacterElement: React.RefObject<any>;
 }) => {
   const bestmatch = useSelector(
     (state: RootState) => state.questionsSlice.bestMatch
   );
-  const inView = useInView(refCharecterElement, { once: true });
+  const inView = useInView(refCharacterElement, { once: true });
   const mainAnimateControl = useAnimation();
   const navigate = useNavigate();
   const [imageLoading, setImageLoading] = useState(true);
@@ -36,7 +36,7 @@ const Character = ({
       initial={{ opacity: 0, x: "-100%" }}
       exit={{ opacity: 0, x: "-100%" }}
       transition={{ type: "spring", stiffness: 150, duration: 2 }}
-      ref={refCharecterElement}
+      ref={refCharacterElement}
       className="md:w-1/2 mx-auto flex bg-cover flex-row justify-center items-center rounded-xl mt-4 my-20"
     >
       {bestmatch && (

@@ -27,7 +27,6 @@ const HomeContent = (props: { refElement: RefObject<HTMLDivElement> }) => {
               behavior: "smooth",
             });
           }}
-          // size="large"
           color="secondary"
           className=" flex flex-col justify-center items-center h-18 w-18"
         >
